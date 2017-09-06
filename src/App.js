@@ -2,8 +2,10 @@ import './App.css';
 
 import React, { Component } from 'react';
 
-import Remark from './Remark';
+import Node from './Node';
+import Photo from './Photo';
 import State from './State';
+import State1 from './State1';
 import Timer from './Timer';
 import Todo from './Todo';
 
@@ -12,18 +14,20 @@ class App extends Component {
   render() {
     return ( 
        <div className="App">
-           <p>渲染的文字</p>
+          <p>渲染的文字</p>
             
-           <Timer />
+          <Timer />
 
-           <State name="xsk"/>
+          <State name="xsk"/>
 
-           <Todo />
-           
-           <Remark />
-     
+          <Todo />
+
+          <State1 caption="china" /> 
          
-           
+          <Photo  caption='Hong Kong!'/>
+
+          <Node />
+          
        </div>  
     );
   }
