@@ -2,6 +2,7 @@ import './App.css';
 
 import React, { Component } from 'react';
 
+import Like from './Like';
 import Node from './Node';
 import Photo from './Photo';
 import State from './State';
@@ -27,6 +28,9 @@ class App extends Component {
           <Photo  caption='Hong Kong!'/>
 
           <Node />
+
+          <Like />
+
           
        </div>  
     );

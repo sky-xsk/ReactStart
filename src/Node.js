@@ -24,10 +24,11 @@ class Node extends React.Component{
             ] 
         }
     }
+
     render(){
         return(
             <ul> 
-                <h4>循环遍历</h4>   
+                <h4>循环遍历</h4>
                 {
                     this.state.notes.map(item => (
                         <li key={item.id}>{item.id}:{item.content} </li>
@@ -35,6 +36,6 @@ class Node extends React.Component{
                 }
             </ul>
         )
-    }
+    };
 };
 export default Node;
