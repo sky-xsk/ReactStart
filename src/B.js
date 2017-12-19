@@ -1,8 +1,10 @@
+import './App.css';
+
 import React from 'react';
 
 class B extends React.Component{
     render(){
-        return <div>BBBBBBBBB </div>
+        return <div className='b'>BBBBBBBBB </div>
     }
 };
 export default B;
