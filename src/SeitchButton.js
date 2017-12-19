@@ -28,6 +28,9 @@ class SeitchButton extends React.Component{
 
 SeitchButton.defaultProps ={
     open:false
-}
+};
 
+SeitchButton.prototype={
+
+};
 export default SeitchButton;
