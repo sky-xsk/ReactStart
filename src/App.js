@@ -12,6 +12,17 @@ import State from './State';
 import Timer from './Timer';
 import Todo from './Todo';
 
+const Gao = (props)=><h1>{props.children}</h1>;
+
+//小写转大写
+
+const yell = (PassedComponent)=>({children, ...props})=>
+  <PassedComponent {...props}>
+      {children.toUpperCase()}!
+  </PassedComponent>
+const Title = (props)=><h1>{props.children}</h1>
+const AngryTitle = yell(Title)
+
 class App extends Component {
 
   render() {
@@ -35,7 +46,12 @@ class App extends Component {
 
           <SeitchButton />
           
-          <MessageList />
+          <MessageList />   
+
+          <Gao>高阶组件</Gao>
+
+          <AngryTitle>asdasdas</AngryTitle>
+          
        </div>  
     );
   }

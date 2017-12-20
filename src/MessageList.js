@@ -25,7 +25,7 @@ class MessageList extends Component{
             return (
                 <Message key={index} messages={messages}/>
             )
-        })
+        });
         return(
             <div>
                 <h1>list of message</h1>
