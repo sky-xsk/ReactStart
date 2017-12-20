@@ -4,19 +4,34 @@ import Message from './Message';
 
 class MessageList extends Component{
     state={
-        messages:{
-            status:'read',
-            content:'i will be traveling soon!'
-        }
+        messages:[
+            {
+                status:'read1',
+                content:'i will be traveling soon!'
+            }, {
+                status:'read2',
+                content:'i will be traveling soon!'
+            }, {
+                status:'read3',
+                content:'i will be traveling soon!'
+            }, {
+                status:'read4',
+                content:'i will be traveling soon!'
+            },
+        ]
     }
     render(){
-        return (
+        var Messagesl = this.state.messages.map(function(messages,index){
+            return (
+                <Message key={index} messages={messages}/>
+            )
+        })
+        return(
             <div>
-                <h1>List of message</h1>
-                <Message messages={this.state.messages}/>
+                <h1>list of message</h1>
+                {Messagesl}
             </div>
-        )
+        ) 
     }
 }
-
 export default MessageList;
