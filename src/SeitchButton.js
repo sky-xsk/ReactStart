@@ -10,6 +10,7 @@ class SeitchButton extends React.Component{
     }
 
     handleClick(event){
+        console.log(event)
         this.setState({open:!this.state.open})
     }
 
@@ -21,13 +22,13 @@ class SeitchButton extends React.Component{
                 <input type='checkbox' checked={open} /> 男
             </label>
         )
-
     }
-
 }
+
 SeitchButton.propTypes={
 
 };
+
 SeitchButton.defaultProps ={
     open:false
 };

@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 
 import B from './B';
 import Like from './Like';
+import MessageList from './MessageList';
 import Node from './Node';
 import Photo from './Photo';
 import SeitchButton from './SeitchButton';
@@ -34,6 +35,7 @@ class App extends Component {
 
           <SeitchButton />
           
+          <MessageList />
        </div>  
     );
   }
