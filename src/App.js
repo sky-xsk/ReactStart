@@ -15,7 +15,6 @@ import Todo from './Todo';
 const Gao = (props)=><h1>{props.children}</h1>;
 
 //小写转大写
-
 const yell = (PassedComponent)=>({children, ...props})=>
   <PassedComponent {...props}>
       {children.toUpperCase()}!
@@ -52,6 +51,7 @@ class App extends Component {
 
           <AngryTitle>asdasdas</AngryTitle>
           
+  
        </div>  
     );
   }
