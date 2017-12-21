@@ -3,7 +3,9 @@ import './App.css';
 import React, { Component } from 'react';
 
 import B from './B';
+import Compute from './Compute';
 import Like from './Like';
+import Likes from './Likes';
 import MessageList from './MessageList';
 import Node from './Node';
 import Photo from './Photo';
@@ -51,7 +53,12 @@ class App extends Component {
 
           <AngryTitle>asdasdas</AngryTitle>
           
-  
+          <Likes wordings={{likeText:'no',unlikeText:'yes'}} 
+          onClick={() => console.log('Click on like button!')}
+          />
+
+          <Compute />
+          
        </div>  
     );
   }
