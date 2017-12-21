@@ -12,7 +12,7 @@ class Compute extends React.Component {
         }
     }
     handleTagger() {
-      let sta;
+        let sta;
         let content;
         if(this.state.status === 'on') {
             sta = 'off'; 

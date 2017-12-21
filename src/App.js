@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 
 import B from './B';
 import Compute from './Compute';
+import ForsIndex from './ForsIndex';
 import Like from './Like';
 import Likes from './Likes';
 import MessageList from './MessageList';
@@ -59,6 +60,7 @@ class App extends Component {
 
           <Compute />
           
+          <ForsIndex />
        </div>  
     );
   }
