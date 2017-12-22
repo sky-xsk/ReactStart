@@ -3,6 +3,7 @@ import './App.css';
 import React, { Component } from 'react';
 
 import B from './B';
+import CommentApp from './modulesApp/CommentApp';
 import Compute from './Compute';
 import ForsIndex from './ForsIndex';
 import Like from './Like';
@@ -61,6 +62,9 @@ class App extends Component {
           <Compute />
           
           <ForsIndex />
+
+          <CommentApp />
+
        </div>  
     );
   }
