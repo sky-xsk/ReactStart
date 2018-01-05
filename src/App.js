@@ -73,7 +73,7 @@ class App extends Component {
 
           <CommentApp />
           <h1>props传值</h1>
-          <BodyIndex userId={123979898912234233} username={"skys"}/>
+          <BodyIndex userId={123979898912234233} username={'xsf'}/>
   
           
        </div>  

@@ -11,7 +11,7 @@ export default class BodyIndex extends React.Component {
         this.state = {
             age: 20,
             name:'',
-            username:'asdasd'
+            username:'sdsds'
         }; //初始化赋值  
     }
 
@@ -31,8 +31,8 @@ export default class BodyIndex extends React.Component {
                 <h2>props</h2>
                 <p>{this.props.userId}</p>
                 <p>age: {this.state.age}</p>
-                <p>username: {this.state.username}</p>
-                <BodyChild userId={this.props.userId}  username={this.props.username} //传所有 {...this.props}
+                <p>username: {this.props.username}</p>
+                <BodyChild userId={this.props.userId}  //传所有 {...this.props}
                  handleChneges={this.handleChneges.bind(this)}
                  handleClick = {this.handleClick.bind(this)}
                 />
@@ -42,9 +42,9 @@ export default class BodyIndex extends React.Component {
         )
     }
 }
-
-// BodyIndex.propTypes = {
-// 	userid: React.PropTypes.number.isRequired
-// };
-
+//设置传值的类型
+BodyIndex.propTypes = {
+	userId: React.PropTypes.number.isRequired
+};
+//设置默认值 
 BodyIndex.defaultProps = defaultProps
