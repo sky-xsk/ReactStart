@@ -1,16 +1,18 @@
 import BodyChild from './BodyChild';
 import React from 'react';
 
+const defaultProps = {
+	username: '这是一个默认的用户名'
+};
 export default class BodyIndex extends React.Component {
     constructor(props){
         super(props);
         this.handleClick = this.handleClick.bind(this);
         this.state = {
             age: 20,
-            name:''
-        }; //初始化赋值
-       
-       
+            name:'',
+            username:'asdasd'
+        }; //初始化赋值  
     }
 
     handleChneges(event){
@@ -29,7 +31,8 @@ export default class BodyIndex extends React.Component {
                 <h2>props</h2>
                 <p>{this.props.userId}</p>
                 <p>age: {this.state.age}</p>
-                <BodyChild userId={this.props.userId}  //传所有 {...this.props}
+                <p>username: {this.state.username}</p>
+                <BodyChild userId={this.props.userId}  username={this.props.username} //传所有 {...this.props}
                  handleChneges={this.handleChneges.bind(this)}
                  handleClick = {this.handleClick.bind(this)}
                 />
@@ -39,3 +42,9 @@ export default class BodyIndex extends React.Component {
         )
     }
 }
+
+// BodyIndex.propTypes = {
+// 	userid: React.PropTypes.number.isRequired
+// };
+
+BodyIndex.defaultProps = defaultProps
