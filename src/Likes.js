@@ -4,43 +4,23 @@ import React from 'react';
 class Likes extends React.Component{
     constructor(){
         super()
-        this.state = {isLiked:false}
+        this.state = {isLike:false}
     }
-
-    handleClickOnLikeButton(){
+    handleClick(){
         this.setState({
-            isLiked:!this.state.isLiked
+            isLike:!this.state.isLike
         })
-        if(this.props.onClick){
-            this.props.onClick()
-        }
     }
-
     render(){
-        //1.
-
-        // const likeText = this.props.likeText || 'no'
-        // const unlikeText = this.props.unlikeText || 'yes'
-        // return (
-        //     <button onClick={this.handleClickOnLikeButton.bind(this)}>
-        //         {this.state.isLiked ? likeText : unlikeText}
-        //     </button>
-        // )
-
-        //2.
-        const wordings = this.props.wordings || {
-            likeText:'no',
-            unlikeText:'yes'
-        }
+        const likedText = this.props.likedText || '取消';
+        const unlikedText = this.props.unlikedText || '点赞'
         return (
-            <div>
-                <button onClick={this.handleClickOnLikeButton.bind(this)}>
-                     {this.state.isLiked ? wordings.likeText : wordings.unlikeText}
-                 </button>
-            </div>
-          
+            <button onClick={this.handleClick.bind(this)}>
+                {this.state.isLike ? likedText : unlikedText}
+            </button>
         )
     }
-}
 
+}
 export default Likes;
+

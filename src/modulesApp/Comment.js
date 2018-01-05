@@ -6,8 +6,8 @@ import PropTypes from 'prop-types';
 class Comment  extends Component{
     static  PropTypes={
         comment:PropTypes.object.isRequired,
-         onDeleteComment: PropTypes.func,
-         index: PropTypes.number
+        onDeleteComment: PropTypes.func,
+        index: PropTypes.number
     }
     constructor(){
         super()
@@ -16,7 +16,7 @@ class Comment  extends Component{
     componentWillMount(){
          this._updateTimeString()
          this._timer = setInterval(
-          this._updateTimeString.bind(this),
+        this._updateTimeString.bind(this),
           5000
         )
 

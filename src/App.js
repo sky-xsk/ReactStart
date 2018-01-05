@@ -3,6 +3,7 @@ import './App.css';
 import React, { Component } from 'react';
 
 import B from './B';
+import BodyIndex from './props/BodyIndex';
 import CommentApp from './modulesApp/CommentApp';
 import Compute from './Compute';
 import ForsIndex from './ForsIndex';
@@ -27,7 +28,14 @@ const Title = (props)=><h1>{props.children}</h1>
 const AngryTitle = yell(Title)
 
 class App extends Component {
-
+  constructor(props){
+    super(props);
+    this.state = {price: 0}
+  }
+  //给子组件用来传price用的方法
+  changePrice(price){
+    this.setState({price: price})
+  }
   render() {
     return ( 
        <div className="App">
@@ -64,7 +72,10 @@ class App extends Component {
           <ForsIndex />
 
           <CommentApp />
-
+          <h1>props传值</h1>
+          <BodyIndex userId={1239798989123}/>
+  
+          
        </div>  
     );
   }
