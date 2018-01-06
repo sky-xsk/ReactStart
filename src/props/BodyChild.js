@@ -16,7 +16,6 @@ export default class BodyChild extends React.Component {
                  <p>子组件输入：
                      <input type="text" onChange={this.props.handleChneges}/>
                  </p>
-                 
                  <h4 onClick={this.props.handleClick}>{this.state.name}</h4>
      
             </div>
