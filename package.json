@@ -6,6 +6,7 @@
     "prop-types": "^15.6.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-mixin": "^2.0.2",
     "react-router": "^4.2.0",
     "react-scripts": "0.9.5",
     "remarkable": "^1.7.1"
